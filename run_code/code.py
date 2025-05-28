@@ -9,7 +9,7 @@ class Program(QMainWindow):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
-        self.ui.stackedWidget.setCurrentIndex(2)
+        self.ui.stackedWidget.setCurrentIndex(0)
 
 
 
