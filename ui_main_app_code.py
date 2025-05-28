@@ -23,7 +23,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(523, 421)
+        Form.resize(527, 429)
         self.horizontalLayout = QHBoxLayout(Form)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.stackedWidget = QStackedWidget(Form)
@@ -46,9 +46,33 @@ class Ui_Form(object):
 
         self.verticalLayout_2.addLayout(self.verticalLayout_3)
 
+        self.verticalLayout_4 = QVBoxLayout()
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(100, -1, 100, -1)
+        self.pushButton = QPushButton(self.welcome_page)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setStyleSheet(u"QPushButton{color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 0, 0);\n"
+"border:2  solid white;\n"
+"        border-radius: 6px;\n"
+"paddding: 10px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 0, 0);\n"
+"	background-color: rgb(255, 255, 255);\n"
+"border: 2px solid white;\n"
+"        border-radius: 5px;}\n"
+"")
+
+        self.verticalLayout_4.addWidget(self.pushButton)
+
+
+        self.verticalLayout_2.addLayout(self.verticalLayout_4)
+
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(30, -1, 30, -1)
+        self.horizontalLayout_2.setContentsMargins(100, -1, 100, -1)
         self.bout_sign_up = QPushButton(self.welcome_page)
         self.bout_sign_up.setObjectName(u"bout_sign_up")
 
@@ -71,6 +95,12 @@ class Ui_Form(object):
         self.sign_up_page.setObjectName(u"sign_up_page")
         self.gridLayout = QGridLayout(self.sign_up_page)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.erruer_sign_password2 = QLabel(self.sign_up_page)
+        self.erruer_sign_password2.setObjectName(u"erruer_sign_password2")
+        self.erruer_sign_password2.setStyleSheet(u"color: rgb(255, 0, 0);")
+
+        self.gridLayout.addWidget(self.erruer_sign_password2, 13, 1, 1, 1)
+
         self.sign_nom = QLabel(self.sign_up_page)
         self.sign_nom.setObjectName(u"sign_nom")
 
@@ -79,38 +109,38 @@ class Ui_Form(object):
         self.sign_date_naissance = QLabel(self.sign_up_page)
         self.sign_date_naissance.setObjectName(u"sign_date_naissance")
 
-        self.gridLayout.addWidget(self.sign_date_naissance, 7, 0, 1, 1)
+        self.gridLayout.addWidget(self.sign_date_naissance, 6, 0, 1, 1)
 
         self.dateEdit = QDateEdit(self.sign_up_page)
         self.dateEdit.setObjectName(u"dateEdit")
         self.dateEdit.setCalendarPopup(True)
 
-        self.gridLayout.addWidget(self.dateEdit, 7, 1, 1, 1)
+        self.gridLayout.addWidget(self.dateEdit, 6, 1, 1, 1)
 
         self.signpassword2 = QLineEdit(self.sign_up_page)
         self.signpassword2.setObjectName(u"signpassword2")
 
-        self.gridLayout.addWidget(self.signpassword2, 13, 1, 1, 1)
+        self.gridLayout.addWidget(self.signpassword2, 12, 1, 1, 1)
 
         self.sign_password_enter1 = QLineEdit(self.sign_up_page)
         self.sign_password_enter1.setObjectName(u"sign_password_enter1")
 
-        self.gridLayout.addWidget(self.sign_password_enter1, 10, 1, 1, 1)
+        self.gridLayout.addWidget(self.sign_password_enter1, 9, 1, 1, 1)
 
         self.verticalSpacer_5 = QSpacerItem(20, 30, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
 
-        self.gridLayout.addItem(self.verticalSpacer_5, 16, 0, 1, 2)
+        self.gridLayout.addItem(self.verticalSpacer_5, 15, 0, 1, 2)
 
         self.sign_password2 = QLabel(self.sign_up_page)
         self.sign_password2.setObjectName(u"sign_password2")
 
-        self.gridLayout.addWidget(self.sign_password2, 13, 0, 1, 1)
+        self.gridLayout.addWidget(self.sign_password2, 12, 0, 1, 1)
 
         self.erreur_sign_password1 = QLabel(self.sign_up_page)
         self.erreur_sign_password1.setObjectName(u"erreur_sign_password1")
         self.erreur_sign_password1.setStyleSheet(u"color: rgb(255, 0, 0);")
 
-        self.gridLayout.addWidget(self.erreur_sign_password1, 11, 1, 1, 1)
+        self.gridLayout.addWidget(self.erreur_sign_password1, 10, 1, 1, 1)
 
         self.label_2 = QLabel(self.sign_up_page)
         self.label_2.setObjectName(u"label_2")
@@ -128,7 +158,7 @@ class Ui_Form(object):
 
         self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout.addItem(self.verticalSpacer_7, 9, 1, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer_7, 8, 1, 1, 1)
 
         self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
@@ -139,37 +169,25 @@ class Ui_Form(object):
         self.horizontalLayout_6.addWidget(self.sign_up_fini_boutton)
 
 
-        self.gridLayout.addLayout(self.horizontalLayout_6, 17, 0, 1, 2)
+        self.gridLayout.addLayout(self.horizontalLayout_6, 16, 0, 1, 2)
 
         self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout.addItem(self.verticalSpacer_6, 12, 1, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer_6, 11, 1, 1, 1)
 
         self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout.addItem(self.verticalSpacer_8, 6, 1, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer_8, 5, 1, 1, 1)
 
         self.go_back_sign_up = QPushButton(self.sign_up_page)
         self.go_back_sign_up.setObjectName(u"go_back_sign_up")
 
         self.gridLayout.addWidget(self.go_back_sign_up, 0, 0, 1, 1)
 
-        self.erreur_sign_nom = QLabel(self.sign_up_page)
-        self.erreur_sign_nom.setObjectName(u"erreur_sign_nom")
-        self.erreur_sign_nom.setStyleSheet(u"color: rgb(255, 0, 0);")
-
-        self.gridLayout.addWidget(self.erreur_sign_nom, 5, 1, 1, 1)
-
         self.sign_password = QLabel(self.sign_up_page)
         self.sign_password.setObjectName(u"sign_password")
 
-        self.gridLayout.addWidget(self.sign_password, 10, 0, 1, 1)
-
-        self.erruer_sign_password2 = QLabel(self.sign_up_page)
-        self.erruer_sign_password2.setObjectName(u"erruer_sign_password2")
-        self.erruer_sign_password2.setStyleSheet(u"color: rgb(255, 0, 0);")
-
-        self.gridLayout.addWidget(self.erruer_sign_password2, 14, 1, 1, 1)
+        self.gridLayout.addWidget(self.sign_password, 9, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.sign_up_page)
         self.log_in_page = QWidget()
@@ -263,8 +281,10 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.welcome_texte.setText(QCoreApplication.translate("Form", u"Welcome to Mirabelle site", None))
+        self.pushButton.setText(QCoreApplication.translate("Form", u"Get an initial assessment", None))
         self.bout_sign_up.setText(QCoreApplication.translate("Form", u"Sign up", None))
         self.bout_log_in.setText(QCoreApplication.translate("Form", u"Log in", None))
+        self.erruer_sign_password2.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         self.sign_nom.setText(QCoreApplication.translate("Form", u"Nom:", None))
         self.sign_date_naissance.setText(QCoreApplication.translate("Form", u"Date naissance:", None))
         self.signpassword2.setPlaceholderText(QCoreApplication.translate("Form", u"Entrer votre password", None))
@@ -275,9 +295,7 @@ class Ui_Form(object):
         self.sign_nom_enter.setPlaceholderText(QCoreApplication.translate("Form", u"Entrer votre nom", None))
         self.sign_up_fini_boutton.setText(QCoreApplication.translate("Form", u"Fini", None))
         self.go_back_sign_up.setText(QCoreApplication.translate("Form", u"go back", None))
-        self.erreur_sign_nom.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         self.sign_password.setText(QCoreApplication.translate("Form", u"Password:", None))
-        self.erruer_sign_password2.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         self.label_10.setText(QCoreApplication.translate("Form", u"Log in", None))
         self.log_in_bout_fini.setText(QCoreApplication.translate("Form", u"Fini", None))
         self.log_in_password.setPlaceholderText(QCoreApplication.translate("Form", u"Entrer votre pasword", None))
