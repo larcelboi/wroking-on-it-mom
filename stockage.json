@@ -1,0 +1,67 @@
+{
+    "py/object": "classes.stockage.Stockage",
+    "dict_uer": {
+        "8334": {
+            "py/object": "classes.personne.Personne",
+            "liste_erreur": [],
+            "id": 8334,
+            "_nom_complet": "Afds12",
+            "_date_naissance": {
+                "py/object": "datetime.date",
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.date"
+                    },
+                    [
+                        "B9ABAQ=="
+                    ]
+                ]
+            },
+            "_password1": "lolo1@",
+            "_password2": "lolo1@"
+        },
+        "3570": {
+            "py/object": "classes.personne.Personne",
+            "liste_erreur": [],
+            "id": 3570,
+            "_nom_complet": "Mrc2",
+            "_date_naissance": {
+                "py/object": "datetime.date",
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.date"
+                    },
+                    [
+                        "B9ABAQ=="
+                    ]
+                ]
+            },
+            "_password1": "Polla1@",
+            "_password2": "Polla1@"
+        },
+        "658": {
+            "py/object": "classes.personne.Personne",
+            "liste_erreur": [],
+            "id": 658,
+            "_nom_complet": "Jojo1",
+            "_date_naissance": {
+                "py/object": "datetime.date",
+                "__reduce__": [
+                    {
+                        "py/type": "datetime.date"
+                    },
+                    [
+                        "B9ABAQ=="
+                    ]
+                ]
+            },
+            "_password1": "pola1@",
+            "_password2": "pola1@"
+        }
+    },
+    "id_user": [
+        8334,
+        3570,
+        658
+    ]
+}

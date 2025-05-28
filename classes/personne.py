@@ -1,14 +1,19 @@
-from datetime import datetime
+from datetime import datetime,date
 import random
+
+from PySide6.QtCore import QDate
+
+
 class Personne:
     def __init__(self, nom_complet, date_naissance:datetime,password1,password2):
+        self.liste_erreur = []
+        self.id  = random.choice(range(10000))
+
         self.nom_complet = nom_complet
         self.date_naissance = date_naissance
         self.password1 = password1
         self.password2 = password2
 
-        self.liste_erreur = []
-        self._id  = random.choice(range(10000))
 
     @property
     def nom_complet(self):
@@ -21,7 +26,7 @@ class Personne:
     def verification_nom(self,nom_complet):
         try:
             if isinstance(nom_complet, str) and nom_complet.strip() != "":
-                self._nom_complet = nom_complet.strip
+                self._nom_complet = nom_complet
             else:
                 raise ValueError("Vous devez entrer un nom")
         except Exception as e:
@@ -36,9 +41,10 @@ class Personne:
         self.verification_date(date_naissance)
 
     def verification_date(self,date_naissance):
+        nouv_date = date_naissance.toPython()
         try:
-            if isinstance(date_naissance, datetime):
-                self._date_naissance = date_naissance
+            if isinstance(nouv_date, date):
+                self._date_naissance = nouv_date
             else:
                 raise ValueError("date invalide ")
         except Exception as e:
@@ -65,7 +71,7 @@ class Personne:
                 if isinstance(password1, str) and password1.strip() != "":
                     self._password1 = password1
                 else:
-                    raise ValueError("Vous devez entrer un password")
+                    raise ValueError("Vous devez entrer un password1")
             except Exception as e:
                 self.liste_erreur.append(e)
         elif password2 is not None:
@@ -73,9 +79,10 @@ class Personne:
                 if isinstance(password2, str) and password2.strip() != "":
                     self._password2 = password2
                 else:
-                    raise ValueError("Vous devez entrer un password")
+                    raise ValueError("Vous devez entrer un password2")
             except Exception as e:
                 self.liste_erreur.append(e)
 
     def __str__(self):
-        return f"ID: {self._id} Nom: {self.nom_complet} - Date naissance: {self.date_naissance} - Password1: {self.password1} - Password2: {self.password2}"
+        return f"ID: {self.id} Nom: {self.nom_complet} - Date naissance: {self.date_naissance} - Password1: {self.password1} - Password2: {self.password2}"
+
